@@ -32,12 +32,12 @@ public class RMIClient implements Serializable {
 		
 		try{
 						
-			environment = System.getenv("SERVER_PORT");
+			environment = "3000";
 			System.out.println(environment);
 			
-			hostname = environment.split(":")[0];
+			hostname = "localhost";
 			
-			portnumber = Integer.parseInt(environment.split(":")[1]);
+			portnumber = 3000;
 			System.out.println("seeking connection on:" + environment);
 			
 			Registry myreg = LocateRegistry.getRegistry(hostname, portnumber);				
